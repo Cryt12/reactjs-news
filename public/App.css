@@ -1,0 +1,275 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Define overall page styles */
+.App {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* Change to column layout */
+  background-color: rgba(0, 0, 0, 0.856); /* Black background */
+  color: white; /* White text */
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align header content to both ends */
+  margin-bottom: 20px;
+  background-color: #333;
+}
+
+header img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+header h1 {
+  font-size: 24px;
+  margin-right: auto; /* Move the h1 element to the left */
+}
+
+.search-bar {
+  max-width: 100%;
+  margin-left: auto;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center; /* Align search bar and category vertically in the center */
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid gold;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Headline styles */
+.headline {
+  display: flex;
+  flex-direction: column; /* Arrange elements in a column */
+  margin-bottom: 20px;
+  align-items: center;
+  text-align: center;
+  border: 2px solid gold; /* Add a gold border to the headline */
+  padding: 10px; /* Add padding to the headline */
+  border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+/* Make the breaking news image responsive */
+.headline img {
+  max-width: 100%; /* Make the image responsive */
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto 10px;
+}
+
+/* Make article images fixed size */
+.article img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Style the headline text to make it more attractive */
+.headline h2 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: gold;
+}
+
+.headline p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.headline a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gold;
+  color: black;
+  padding: 15px 40px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, cursor 0.3s;
+  cursor: pointer;
+  width: auto; /* Allow the button to adjust its width based on content */
+}
+
+.headline a:hover{
+  background-color: rgb(0, 0, 0); /* Change background color on hover */
+  color: rgb(255, 228, 75); /* Change text color on hover */
+  border-color: rgb(255, 228, 75); /* Change border color on hover */
+}
+
+/* Article styles */
+.article-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.article {
+  flex-basis: calc(33.33% - 10px); /* Set flex-basis to 33.33% for 3 articles in a row */
+  margin-bottom: 20px;
+  border: 2px solid gold;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box; /* Add this to ensure padding and border don't affect the width */
+}
+
+.article img {
+  max-width: 1000%;
+  height: 150px;
+}
+
+.article h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: gold;
+}
+
+.article p {
+  font-size: 14px;
+}
+
+.category-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center categories horizontally */
+  margin-top: 1px;
+  margin-bottom: 10px;
+}
+
+.category {
+  margin: 0 10px; /* Add margin to separate categories */
+  border: 1px solid rgb(255, 228, 75); /* Add border */
+  padding: 5px 10px; /* Add padding to space out the text from the border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add transition for smooth hover effect */
+}
+
+.category a {
+  text-decoration: none;
+  color: rgb(255, 228, 75);
+  font-size: 16px;
+}
+
+.category:hover {
+  background-color: rgb(0, 0, 0); /* Change background color on hover */
+  color: rgb(0, 0, 0); /* Change text color on hover */
+  border-color: rgb(255, 228, 75); /* Change border color on hover */
+}
+
+.read-more-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gold;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, cursor 0.3s;
+  cursor: pointer;
+  margin-left: 60%; /* Adjust the margin as needed */
+  width: auto; /* Allow the button to adjust its width based on content */
+  min-width: 120px; /* Set a minimum width to prevent the button from becoming too narrow */
+  max-width: 30%; /* Limit the maximum width to a percentage of the container */
+}
+
+
+/* Define hover effect for the button */
+.read-more-button:hover {
+  background-color: black;
+  color: gold;
+}
+
+@media screen and (max-width: 1300px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .headline img {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto 10px;
+  }
+
+  .headline h2 {
+    font-size: 18px;
+  }
+
+  .article {
+    flex-basis: calc(50% - 10px);
+  }
+  
+  .headline {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .article {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .read-more-button {
+    margin-left: 50%; /* Adjust the margin as needed */
+    width: auto; /* Allow the button to adjust its width based on content */
+    min-width: 120px; /* Set a minimum width to prevent the button from becoming too narrow */
+    max-width: 30%; /* Limit the maximum width to a percentage of the container */
+  }
+}
+
+
+/* Responsive styles */
+@media screen and (max-width:729px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .headline img {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto 10px;
+  }
+
+  .headline h2 {
+    font-size: 18px;
+  }
+
+  .article {
+    flex-basis: calc(50% - 10px);
+  }
+  
+  .headline {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .article {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .read-more-button {
+    padding: 15px 10px; 
+    margin-left: 480px; 
+    margin-right: auto; 
+  }
+}
+
+@media screen and (max-width: 673px) {
+  .article {
+    flex-basis: 100%; 
+  }
+  .read-more-button {
+    width: 100%; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+}
